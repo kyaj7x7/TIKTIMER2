@@ -19,7 +19,7 @@ jobs:
         run: |
           set -euo pipefail
           curl --fail --location --silent --show-error --retry 3 "$BASE_URL/tiktimer.zip" -o tiktimer.zip
-          printf '%s  %s\n' '3dafe93e59ed78703c5f8d28346fee9f3bbee1a00b891b87a0e715b402380ff6' 'tiktimer.zip' | sha256sum --check --status
+          printf '%s  %s\n' '3dafe93e59ed78703c5f8d28346fee9f3beea1e00b891b87a0e715b402380ff6' 'tiktimer.zip' | sha256sum --check --status
           test "$(stat -c%s tiktimer.zip)" -eq 614574533
       - name: Publish the stable Timer release
         env:
